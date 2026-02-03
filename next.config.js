@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export',
+  distDir: 'out',
   images: {
+    unoptimized: true,
     remotePatterns: [],
     formats: ['image/webp', 'image/avif'],
   },
