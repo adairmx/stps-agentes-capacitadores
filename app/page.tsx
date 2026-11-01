@@ -225,7 +225,7 @@ export default function Home() {
             name: "Agentes Capacitadores STPS",
             description:
               "Capacitación profesional certificada ante STPS en el Bajío Mexicano",
-            url: "https://stps-agentes-capacitadores.com",
+            url: "https://stps-agentes-capacitadores.vercel.app",
             areaServed: [
               { "@type": "State", name: "Guanajuato" },
               { "@type": "State", name: "Querétaro" },

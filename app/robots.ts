@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://stps-agentes-capacitadores.com/sitemap.xml',
+    sitemap: 'https://stps-agentes-capacitadores.vercel.app/sitemap.xml',
   }
 }

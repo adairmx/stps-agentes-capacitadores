@@ -4,7 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stps-agentes-capacitadores.com'),
+  metadataBase: new URL('https://stps-agentes-capacitadores.vercel.app'),
+  alternates: { canonical: '/' },
   title: {
     default: "Agentes Capacitadores STPS Certificados | Cursos de Capacitación en el Bajío",
     template: "%s | Agentes Capacitadores STPS"
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    url: 'https://stps-agentes-capacitadores.com',
+    url: 'https://stps-agentes-capacitadores.vercel.app',
     siteName: 'Agentes Capacitadores STPS',
     title: 'Agentes Capacitadores STPS Certificados | Cursos en el Bajío',
     description: 'Capacitación profesional certificada ante STPS. Más de 15 cursos disponibles en todo el Bajío Mexicano.',
@@ -67,9 +68,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'google-site-verification-code',
-  },
 };
 
 export default function RootLayout({
@@ -79,9 +77,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-MX">
-      <head>
-        <link rel="canonical" href="https://stps-agentes-capacitadores.com" />
-      </head>
       <body className="font-sans antialiased">
         <Header />
         <main className="min-h-screen">{children}</main>

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { bajioStates } from '@/lib/states'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://stps-agentes-capacitadores.com'
+  const baseUrl = 'https://stps-agentes-capacitadores.vercel.app'
   
   // Main pages
   const mainPages = [

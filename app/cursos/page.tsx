@@ -3,6 +3,7 @@ import Link from "next/link";
 import { courses, categories } from "@/lib/courses";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cursos" },
   title: "Cursos de Capacitación STPS Certificados",
   description:
     "Más de 15 cursos de capacitación certificados ante STPS. Seguridad, desarrollo humano, técnicos y más. Constancias DC-3 válidas. Capacitación empresarial en el Bajío.",

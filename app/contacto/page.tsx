@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contacto" },
   title: "Contacto | Solicita Información de Cursos STPS",
   description:
     "Contáctanos para recibir información sobre nuestros cursos de capacitación STPS. Cotizaciones sin compromiso. Servicio en todo el Bajío Mexicano.",

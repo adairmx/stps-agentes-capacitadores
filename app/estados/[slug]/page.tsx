@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const state = bajioStates.find((s) => s.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const state = bajioStates.find((s) => s.slug === slug);
 
   if (!state) {
     return {
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   return {
     title: `Capacitación STPS en ${state.name} | Cursos Certificados`,
+    alternates: { canonical: `/estados/${state.slug}` },
     description: `${state.description} Más de 15 cursos certificados ante STPS. Constancias DC-3 válidas. Servicio profesional en ${state.cities.join(", ")}.`,
     keywords: [
       `STPS ${state.name}`,
@@ -35,8 +37,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function StatePage({ params }: { params: { slug: string } }) {
-  const state = bajioStates.find((s) => s.slug === params.slug);
+export default async function StatePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const state = bajioStates.find((s) => s.slug === slug);
 
   if (!state) {
     notFound();

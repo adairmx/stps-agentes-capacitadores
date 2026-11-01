@@ -3,6 +3,7 @@ import Link from "next/link";
 import { bajioStates } from "@/lib/states";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/estados" },
   title: "Cobertura en el Bajío Mexicano | Capacitación STPS",
   description:
     "Servicios de capacitación STPS en Guanajuato, Querétaro, Aguascalientes, San Luis Potosí y Jalisco. Cobertura completa en el Bajío Mexicano.",
