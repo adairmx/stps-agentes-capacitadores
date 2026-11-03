@@ -77,6 +77,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-MX">
+      <head>
+        <script defer src="https://mente-maestra-seven.vercel.app/t.js" data-site="vercel:stps-agentes-capacitadores"></script>
+      </head>
       <body className="font-sans antialiased">
         <Header />
         <main className="min-h-screen">{children}</main>
